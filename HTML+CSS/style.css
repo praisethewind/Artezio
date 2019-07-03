@@ -1,0 +1,131 @@
+* { 
+      margin: 0; 
+      padding: 0; 
+}
+
+body {
+      margin: 20px auto 50px;
+      min-width: 600px; 
+      max-width: 900px;
+      background: url(images/white-scratch-lines.png) repeat;
+}
+
+
+#header {
+      padding-top: 20px;
+      background: white;
+      height: 230px;
+      border-top-right-radius: 10px; 
+      border-top-left-radius: 10px;
+}
+
+#title {
+      margin-top: 10px;
+      float: left;
+      width: 50%;
+}
+
+.header_title {
+      margin-left: 80px;
+      position: relative; 
+      top: 10px;
+}
+
+.header_title_name {
+      font-family: "Simonetta", "Trebuchet MS", Arial, sans-serif; 
+      color: #454545; 
+      margin-bottom: 6px;
+      font-size: 50px;
+}
+
+.header_title_position {
+      font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
+      color: #777777; 
+      margin-bottom: 10px;
+      font-size: 30px;
+}
+
+.header_title_contacts {
+      font-family: "Trebuchet MS", Verdana, Arial, sans-serif; 
+      color: #656565; 
+      font-weight: bold;
+      margin-bottom: 4px;
+      font-size: 15px;
+      line-height: 1.5;
+}
+
+#avatar {
+      float: left;
+      width: 50%;
+}
+
+.avatar_photo {
+      display: block;
+      margin: 20px;
+      height: 200px;
+      border: 4px double darkgrey;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 5px;
+}
+
+#content {
+      background: white;
+      height: 800px;
+}
+
+#center_content_div {
+      float: left;
+      width: 100%;
+}
+
+#left_content_div {
+      float: left; 
+      width: 50%;
+}
+
+#right_content_div {
+      float: left; 
+      width: 50%;
+}
+
+.content_section {
+      font-family: "Kurale", Arial, serif;
+      color: #565656;
+      font-size: 16px;
+      line-height: 25px;
+      margin-bottom: 15px;
+      margin: 15px 30px;
+}
+
+.content_section_text {
+      padding-left: 30px;
+}
+
+.section_title {
+      background: #00aaaa;
+      font-size: 27px;
+      color: white;
+      width: 100%;
+      display: inline-block;
+      font-family: "Simonetta", "Trebuchet MS", Arial, sans-serif;
+      margin-bottom: 10px;
+      padding-left: 10px;
+      line-height: normal;
+}
+
+#content ul {
+      padding: 0px;
+      margin-left: 30px;
+}
+
+#content h4 {
+      margin: 5px;
+}
+
+#footer {
+      background: #00aaaa;
+      height: 30px;
+      border-bottom-right-radius: 10px; 
+      border-bottom-left-radius: 10px;
+}
