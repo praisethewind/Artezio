@@ -5,7 +5,7 @@ html, body, ul, tr {
 
 body {
       margin: 20px auto 50px;
-      min-width: 600px; 
+      min-width: 300px; 
       max-width: 900px;
       background: url(images/white-scratch-lines.png) repeat;
 }
@@ -136,4 +136,23 @@ body {
       height: 30px;
       border-bottom-right-radius: 10px; 
       border-bottom-left-radius: 10px;
+}
+
+@media only screen and (max-width: 800px) { 
+      #content { height: 1000px; }
+}
+
+@media only screen and (max-width: 700px) { 
+      #content { height: 1200px; }
+      #left_content_div { width: 100%; }
+      #right_content_div { width: 100%; }
+      .content_section { font-size: 14px; }
+      .section_title { font-size: 20px; }
+      .header_title_name { font-size: 40px; }
+      .header_title_position { font-size: 20px; }
+      
+}
+
+@media only screen and (max-width: 600px) { 
+      #content { height: 1400px; }
 }
