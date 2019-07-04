@@ -1,4 +1,4 @@
-* { 
+html, body, ul, tr { 
       margin: 0; 
       padding: 0; 
 }
@@ -112,6 +112,14 @@ body {
       margin-bottom: 10px;
       padding-left: 10px;
       line-height: normal;
+}
+
+.table_first_column {
+      width: 120px;
+      padding: 0;
+      padding-right: 15px;
+      vertical-align: top;
+      text-align: right;
 }
 
 #content ul {
