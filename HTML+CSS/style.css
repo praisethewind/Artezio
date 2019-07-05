@@ -14,9 +14,9 @@ body {
 #header {
       padding-top: 20px;
       background: white;
-      height: 230px;
       border-top-right-radius: 10px; 
       border-top-left-radius: 10px;
+	height: 250px;
 }
 
 #title {
@@ -62,7 +62,7 @@ body {
 .avatar_photo {
       display: block;
       margin: 20px;
-      height: 200px;
+
       border: 4px double darkgrey;
       margin-left: auto;
       margin-right: auto;
@@ -70,12 +70,13 @@ body {
 }
 
 #content {
+      display: inline-block;
       background: white;
-      height: 800px;
+      margin-bottom: 0em;
+      width: 100%;
 }
 
 #center_content_div {
-      float: left;
       width: 100%;
 }
 
@@ -138,21 +139,31 @@ body {
       border-bottom-left-radius: 10px;
 }
 
-@media only screen and (max-width: 800px) { 
-      #content { height: 1000px; }
-}
 
-@media only screen and (max-width: 700px) { 
-      #content { height: 1200px; }
+
+@media screen and (max-width: 700px) { 
       #left_content_div { width: 100%; }
       #right_content_div { width: 100%; }
-      .content_section { font-size: 14px; }
-      .section_title { font-size: 20px; }
+      .content_section { font-size: 20px; }
+      .section_title { font-size: 25px; }
       .header_title_name { font-size: 40px; }
-      .header_title_position { font-size: 20px; }
-      
+      .header_title_position { font-size: 18px; }
+      #header{ padding: 0; }
 }
 
-@media only screen and (max-width: 600px) { 
-      #content { height: 1400px; }
+@media screen and (max-width: 480px) {
+      html { -webkit-text-size-adjust: none; }
+      body { margin: 0; }
+      .header_title { margin-left: 10px; }
+      #avatar { margin-left: 0; margin-right: 0; }
+      #avatar img { width: 75%; height: 75%; }
+      #header { border-top-left-radius: 0; border-top-right-radius: 0; }
+      #footer { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+      .content_section { margin-left: 0; margin-right: 0; }
+      .content_section h4 { text-align: center; }
+      .section_contacts { margin-left: 10px; }
+      .section_title { width: 90%; }
+      .content_section_text { padding-left: 15px; padding-right: 15px; }
+      .table_second_column { padding-right: 15px; }
 }
+
