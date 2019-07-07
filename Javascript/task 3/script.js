@@ -11,17 +11,26 @@ function buttonRun(){
         x2 = +x2;
         let resultDiv = document.getElementById('result');
         resultDiv.innerText = '';
-        if(getRadioValue("switcher") == "sum"){
-            let sum = 0;
-            for(let i = x1; i <= x2; i++)
-                sum += i;
-            resultDiv.append("Сумма всех чисел от x1 до x2 = ", sum);
+        let arr = [];
+        for(let i = 2; i < x2; i++){
+            arr[i] = true;
         }
-        if(getRadioValue("switcher") == "mult"){
-            let mult = 1;
-            for(let i = x1; i <= x2; i++)
-                mult *= i;
-            resultDiv.append("Произведение всех чисел от x1 до x2 = ", mult);
+        var p = 2;
+        do{
+            for(let i = 2; i*p < x2; i++){
+                arr[i*p] = false;
+            }
+            for(let i = p + 1; i < x2; i++){
+                if(arr[i]){
+                    p = i;
+                    break;
+                }
+            }         
+        } while(p * p < x2);
+
+        for(let i = x1; i < arr.length; i++){
+            if(arr[i])
+                resultDiv.append(i + " ")
         }
     }
 }
@@ -30,15 +39,3 @@ function buttonClear(){
     document.getElementById('x1').value = '';
     document.getElementById('x2').value = '';
 }
-
-function getRadioValue(name)
-{
-    for (var i = 0; i < document.getElementsByName(name).length; i++)
-    {
-        if (document.getElementsByName(name)[i].checked)
-        {
-            return document.getElementsByName(name)[i].value;     
-        }
-    }
-}
-    
