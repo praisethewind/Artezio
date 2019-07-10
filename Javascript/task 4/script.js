@@ -1,8 +1,8 @@
-const cardsAmount = 28;
-let cards = [],
+let cardsAmount = 28,
+    cards,
     pressedButton = null,
     timerInAction = false,
-    seconds = 0, minutes = 0, t,
+    seconds, minutes, t,
     sw = document.getElementById('stopwatch');
 
 restart();
@@ -126,4 +126,24 @@ function endGameCheck() {
     }, 300);
 
     document.getElementById("helpbutton").innerHTML = "Level complete<br>Want restart?";
+}
+
+function changeCells(columns) {
+    if(cardsAmount/4 == columns)
+        return;
+    else if(cardsAmount/4 > columns) {
+        for(let i = cardsAmount-1; i > columns*4-1; i--) {
+            document.getElementsByClassName("gameButton")[i].remove();
+        }
+    } else if(cardsAmount/4 < columns) {
+        for(let i = cardsAmount; i < columns*4; i++) {
+            let m = document.getElementsByClassName("cards")[0];
+            console.log(m);
+            m.append('<div class="gameButton"><img id="cell_' + i + '" onclick="button(' + i + ')" src="images/default.jpg"></div>');
+        }
+    }
+    document.querySelector(".main_section").style.width = (columns*108) + "px";
+    cardsAmount = columns*4;
+    console.log(cardsAmount);
+    restart();
 }
